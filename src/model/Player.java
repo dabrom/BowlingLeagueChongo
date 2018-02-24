@@ -14,6 +14,7 @@ import javax.persistence.Table;
 public class Player {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int playerId;
 	private String firstName;
 	private String lastName;
 	private String phoneNumber;
