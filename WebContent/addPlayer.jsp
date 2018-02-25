@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,8 +15,9 @@ Phone Number: <input type="text" name="phoneNumber"><br />
 Screen Name: <input type="text" name="screenName"><br />
 <label for="teamID">Team:</label>
 <select name="teamID">
-  <option value="1">Cubs</option>
-  <option value="2">Bears</option>
+  <c:forEach items="${requestScope.allTeams}" var="currentitem">
+			<option value="${currentitem.teamId}">${currentitem.teamName}</option>
+		</c:forEach>
 </select>
 <input type="submit" value="AddPlayer">
 </form>
