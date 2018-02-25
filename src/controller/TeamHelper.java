@@ -16,4 +16,12 @@ public class TeamHelper {
 		em.getTransaction().commit();
 		em.close();
 	}
+
+	public Team searchForTeamById(int teamID) {
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		Team foundItem = em.find(Team.class, teamID);
+		em.close();
+		return foundItem;
+	}
 }

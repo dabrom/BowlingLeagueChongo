@@ -13,5 +13,8 @@
 		Preferred Night: <input type="text"name="preferredNight"> <br /> 
 		<input type="submit" value="Add Team">
 	</form>
+	<a href="index.html">Back to Home</a><br />
+<a href="viewAllItemsServlet">View complete list</a><br />
+<a href="addPlayer.jsp">Add Player</a>
 </body>
 </html>
