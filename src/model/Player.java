@@ -9,9 +9,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "player")
+@Table(name ="player")
 
-public class Player {
+public class Player{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int playerId;
@@ -22,8 +22,6 @@ public class Player {
 	@ManyToOne
 	@JoinColumn(name = "teamId")
 	private Team team;
-	
-	
 	
 	public Player() {
 		super();
@@ -36,6 +34,14 @@ public class Player {
 		this.phoneNumber = phoneNumber;
 		this.screenName = screenName;
 		this.team = team;
+	}
+
+	
+	/**
+	 * @return the playerId
+	 */
+	public int getPlayerId() {
+		return playerId;
 	}
 
 	public String getFirstName() {

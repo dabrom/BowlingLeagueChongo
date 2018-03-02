@@ -22,7 +22,7 @@ Screen Name: <input type="text" name="screenName"><br />
 <input type="submit" value="AddPlayer">
 </form>
 <a href="index.html">Back to List</a><br />
-<a href="viewAllItemsServlet">View complete list</a>
+<a href="viewAllPlayersServlet">View complete list</a>
 
 </body>
 </html>

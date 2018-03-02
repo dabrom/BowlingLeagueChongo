@@ -31,9 +31,9 @@ public class TeamHelper {
 	public List<Team> showAllTeams() {
 		// TODO Auto-generated method stub
 		EntityManager em = emfactory.createEntityManager();
-		TypedQuery<Team> allResults = em.createQuery("select li from Team li", Team.class);
-		List<Team> allItems = allResults.getResultList();
+		TypedQuery<Team> allResults = em.createQuery("select te from Team te", Team.class);
+		List<Team> allTeams = allResults.getResultList();
 		em.close();
-		return allItems;
+		return allTeams;
 	}
 }
